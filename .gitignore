@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment & local secrets
+.env
+.env.*
+!.env.example
+
+# Vercel
+.vercel/
+
+# Logs & scratch
+*.log
+scratch/
+
+# OS files
+.DS_Store
+Thumbs.db

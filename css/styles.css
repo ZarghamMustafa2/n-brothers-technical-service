@@ -1,0 +1,409 @@
+/* ==========================================================================
+   N BROTHERS TECHNICAL SERVICE - BESPOKE STYLESHEET
+   Brand Direction: High-End HVAC & Domestic Appliance Agency Aesthetic
+   Palette: Deep Navy (#071A2B), Professional Blue (#087EA4), Cool Cyan (#19B5D8)
+   ========================================================================== */
+
+:root {
+  --color-navy: #071A2B;
+  --color-navy-dark: #04101d;
+  --color-navy-light: #0d2842;
+  --color-blue: #087EA4;
+  --color-blue-hover: #076b8c;
+  --color-cyan: #19B5D8;
+  --color-cyan-glow: rgba(25, 181, 216, 0.25);
+  --color-gray-bg: #F4F7F9;
+  --color-gray-border: #E2E8F0;
+  --color-text-dark: #071A2B;
+  --color-text-muted: #4B5E71;
+  --color-text-light: #8CA0B3;
+
+  --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --transition-smooth: 450ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base resets & typography */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  color: var(--color-text-dark);
+  background-color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+img, svg, video, canvas, audio, iframe, embed, object {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, label, li {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+input, select, textarea, button {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.03em;
+}
+
+/* Header dynamic scroll effect */
+.header-scrolled {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+  box-shadow: 0 4px 30px rgba(7, 26, 43, 0.05);
+}
+
+/* Editorial Service Showcase Tiles */
+.service-tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background-color: #071A2B;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.service-tile:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(7, 26, 43, 0.25);
+}
+
+.service-tile .tile-img {
+  transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1), filter 700ms ease;
+}
+
+.service-tile:hover .tile-img {
+  transform: scale(1.06);
+}
+
+/* Architectural Numbering */
+.number-outline {
+  font-family: var(--font-display);
+  font-weight: 800;
+  -webkit-text-stroke: 1.5px rgba(25, 181, 216, 0.4);
+  color: transparent;
+  transition: all var(--transition-fast);
+}
+
+.service-tile:hover .number-outline {
+  -webkit-text-stroke: 1.5px #19B5D8;
+  color: rgba(25, 181, 216, 0.1);
+}
+
+/* Premium Button Architecture */
+.btn-brand-primary,
+.btn-brand-outline,
+.btn-brand-dark,
+.btn-brand-whatsapp {
+  max-width: 100%;
+  box-sizing: border-box;
+  white-space: normal;
+  text-align: center;
+}
+
+.btn-brand-primary {
+  background: #087EA4;
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: all var(--transition-fast);
+}
+
+.btn-brand-primary:hover {
+  background: #076b8c;
+  box-shadow: 0 8px 24px rgba(8, 126, 164, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-brand-dark {
+  background: #071A2B;
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all var(--transition-fast);
+}
+
+.btn-brand-dark:hover {
+  background: #0d2842;
+  border-color: #19B5D8;
+  transform: translateY(-2px);
+}
+
+.btn-brand-outline {
+  background: transparent;
+  color: #071A2B;
+  border: 1.5px solid #071A2B;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: all var(--transition-fast);
+}
+
+.btn-brand-outline:hover {
+  background: #071A2B;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.btn-brand-whatsapp {
+  background: #25D366;
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: all var(--transition-fast);
+}
+
+.btn-brand-whatsapp:hover {
+  background: #20BA5A;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Subtle architectural line grid for dark sections */
+.bg-architectural-grid {
+  background-color: #071A2B;
+  background-image: 
+    linear-gradient(rgba(25, 181, 216, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(25, 181, 216, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Architectural Cyan Accent Line */
+.accent-line-cyan {
+  width: 48px;
+  height: 3px;
+  background: #19B5D8;
+  border-radius: 2px;
+}
+
+/* Premium Custom Form Input */
+.agency-input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background-color: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 0.875rem;
+  font-size: 0.95rem;
+  color: #071A2B;
+  transition: all var(--transition-fast);
+}
+
+.agency-input:focus {
+  border-color: #087EA4;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(8, 126, 164, 0.12);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F7F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  background-color: rgba(4, 16, 29, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+/* Mobile Sticky Bar padding */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 80px;
+  }
+}
+
+/* Touch targets & tap highlight */
+button, a, input, select, textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Accessible Focus States */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #087EA4;
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   MASTER ANIMATION SYSTEM & PROGRESSIVE SCROLL REVEAL
+   ========================================================================== */
+
+/* Base state: Content is 100% visible by default for graceful degradation */
+.reveal-on-scroll {
+  opacity: 1;
+  transform: none;
+}
+
+/* Progressive enhancement: Only hide elements if JavaScript activates scroll reveal */
+.has-scroll-reveal .reveal-on-scroll {
+  opacity: 0;
+  transition: 
+    opacity 750ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 750ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Reveal Variant: Fade Up */
+.has-scroll-reveal .reveal-fade-up {
+  transform: translateY(32px);
+}
+
+/* Reveal Variant: Fade Left */
+.has-scroll-reveal .reveal-fade-left {
+  transform: translateX(-36px);
+}
+
+/* Reveal Variant: Fade Right */
+.has-scroll-reveal .reveal-fade-right {
+  transform: translateX(36px);
+}
+
+/* Mobile safety: On screens <= 640px, translate vertically to eliminate horizontal overflow stretching */
+@media (max-width: 640px) {
+  .has-scroll-reveal .reveal-fade-left,
+  .has-scroll-reveal .reveal-fade-right {
+    transform: translateY(24px);
+  }
+}
+
+/* Reveal Variant: Scale In */
+.has-scroll-reveal .reveal-scale-in {
+  transform: scale(0.95);
+}
+
+/* Reveal Variant: Expandable Line */
+.has-scroll-reveal .reveal-line {
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: 
+    opacity 800ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 800ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Active Revealed State */
+.has-scroll-reveal .reveal-on-scroll.is-revealed,
+.has-scroll-reveal .reveal-fade-up.is-revealed,
+.has-scroll-reveal .reveal-fade-left.is-revealed,
+.has-scroll-reveal .reveal-fade-right.is-revealed,
+.has-scroll-reveal .reveal-scale-in.is-revealed {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+.has-scroll-reveal .reveal-line.is-revealed {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* Stagger Delays for Grouped Elements */
+.has-scroll-reveal .stagger-1 { transition-delay: 100ms; }
+.has-scroll-reveal .stagger-2 { transition-delay: 200ms; }
+.has-scroll-reveal .stagger-3 { transition-delay: 300ms; }
+.has-scroll-reveal .stagger-4 { transition-delay: 400ms; }
+.has-scroll-reveal .stagger-5 { transition-delay: 500ms; }
+
+/* Subtle Animated Underline for Links */
+.hover-underline-cyan {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-underline-cyan::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #19B5D8;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-underline-cyan:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Near Full-Screen Section Chambers */
+.fullscreen-section {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .fullscreen-section {
+    min-height: 90vh;
+  }
+}
+
+/* Prefers Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .has-scroll-reveal .reveal-on-scroll,
+  .has-scroll-reveal .reveal-fade-up,
+  .has-scroll-reveal .reveal-fade-left,
+  .has-scroll-reveal .reveal-fade-right,
+  .has-scroll-reveal .reveal-scale-in,
+  .has-scroll-reveal .reveal-line {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+

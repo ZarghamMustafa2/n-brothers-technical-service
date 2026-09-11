@@ -1,0 +1,15 @@
+{
+  "name": "n-brothers-technical-service",
+  "version": "1.0.0",
+  "description": "Professional AC & Home Appliance Technical Service Website",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "hvac",
+    "ac-repair",
+    "appliance-repair"
+  ],
+  "author": "N Brothers Technical Service",
+  "license": "ISC"
+}
